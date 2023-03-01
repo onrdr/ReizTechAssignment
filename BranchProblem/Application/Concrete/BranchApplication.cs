@@ -13,10 +13,9 @@ public class BranchApplication : IApplication
     }
 
     public void Run()
-    {
-        _service.LoadDatabase();
+    { 
         var root = _service.GetRootBranch();
         int depth = _service.CalculateDepth(root);
-        Console.WriteLine("The depth is: " + depth);
+        Console.WriteLine($"The depth is: {depth}");
     }
 }

@@ -4,18 +4,18 @@ using BranchProblem.Entities;
 namespace BranchProblem.DataAccess.Concrete;
 
 public class BranchesDb : IDatabase
-{
-    private readonly Branch _root = new();
+{ 
+    public Branch RootBranch { get; }
 
-    public void LoadData()
+    public BranchesDb()
     {
-        var root = _root;
+        RootBranch = new Branch();
 
         Branch b1 = new();
-        root.branches.Add(b1);
+        RootBranch.branches.Add(b1);
 
         Branch b2 = new();
-        root.branches.Add(b2);
+        RootBranch.branches.Add(b2);
 
         Branch b3 = new();
         b1.branches.Add(b3);
@@ -40,7 +40,5 @@ public class BranchesDb : IDatabase
 
         Branch b10 = new();
         b8.branches.Add(b10);
-    }
-
-    public Branch GetRootBranch() => _root;
+    } 
 }

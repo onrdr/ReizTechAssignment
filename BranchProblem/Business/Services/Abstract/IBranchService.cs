@@ -4,7 +4,6 @@ namespace BranchProblem.Business.Services.Abstract;
 
 public interface IBranchService 
 {
-    int CalculateDepth(Branch root);
-    void LoadDatabase();
     Branch GetRootBranch();
+    int CalculateDepth(Branch root); 
 }

@@ -26,9 +26,7 @@ public class BranchService : IBranchService
         }
 
         return ++maxDepth;
-    } 
+    }
 
-    public void LoadDatabase() => _db.LoadData();
-
-    public Branch GetRootBranch() => _db.GetRootBranch();    
+    public Branch GetRootBranch() => _db.RootBranch;
 }

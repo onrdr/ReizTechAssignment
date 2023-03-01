@@ -4,6 +4,5 @@ namespace BranchProblem.DataAccess.Abstract;
 
 public interface IDatabase
 {
-    void LoadData();
-    Branch GetRootBranch();
+    public Branch RootBranch { get;} 
 }
